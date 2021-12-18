@@ -246,9 +246,28 @@
         <!--But I am not making a whole CSS div for this...Yet ;)-->
         
         <center><a class="navbar-brand" href="#page-top">Top of Page</a></center>
-        <!-- About Section-->
-        <section class="page-section bg-secondary text-white mb-0" id="about">
-            <div class="container">
+        <!-- Comment Section-->
+    <!-- Vue JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <section id="app">
+            <div class="commentBox">
+              <div class="row">
+                <div class="col-6">
+                  <div class="comment">
+                <p v-for="items in item" v-text="items"></p>
+                  </div><!--End Comment-->
+                  </div><!--End col -->
+                  </div><!-- End row -->
+              <div class="row">
+                <div class="col-6">
+              <textarea type="text" class="input" placeholder="Leave a (clean) comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                  <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Submit</button>
+                </div><!-- End col -->
+              </div><!--End Row -->
+            </div><!--End Container -->
+          </section><!-- end App -->
                 <!-- About Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-white">Contact me</h2>
                 <!-- Icon Divider-->
