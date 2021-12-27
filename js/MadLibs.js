@@ -1,3 +1,4 @@
+
 var questions = 14;
 var questionsLeft = ' [' + questions + ' questions left]';
 var title = prompt('What title are you reviewing?' + questionsLeft);
@@ -34,12 +35,16 @@ var title2 = prompt('Name of another game' + questionsLeft);
 questions -= 1;
 questionsLeft = ' [' + questions + ' questions left]';
 var number2 = prompt('Choose a number 1-10' + questionsLeft);
+
 questions -= 1;
 questionsLeft = ' [' + questions + ' questions left]';
 var adjective4 = prompt('Choose an adjective' + questionsLeft);
 questions -= 1;
 questionsLeft = ' [' + questions + ' questions left]';
 var noun = prompt('Name of a noun' + questionsLeft);
+
+
+    
 
 
 
